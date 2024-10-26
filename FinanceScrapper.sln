@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceScrapper", "FinanceScrapper.csproj", "{374F70FB-71B1-4335-828C-E52EB5EA69F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{374F70FB-71B1-4335-828C-E52EB5EA69F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374F70FB-71B1-4335-828C-E52EB5EA69F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374F70FB-71B1-4335-828C-E52EB5EA69F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374F70FB-71B1-4335-828C-E52EB5EA69F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E7E50EA-52B3-4490-9A69-EDF0265E0F31}
+	EndGlobalSection
+EndGlobal
