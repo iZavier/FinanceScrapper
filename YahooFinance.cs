@@ -1,4 +1,6 @@
 ﻿using History;
+using quoteSummary;
+using quoteType;
 using System.Net;
 using System.Text;
 using System.Text.Json;
@@ -87,13 +89,22 @@ namespace FinanceScrapper
             return null;
         }
 
-        public QuoteTypeResponse GetQuoteSummary(string ticker)
+        public QuoteTypeResponse GetQuoteType(string ticker)
         {
             string res = readWebPage("https://query2.finance.yahoo.com/v1/finance/quoteType/?symbol="+ticker+"&lang=en-GB&region=GB");
             QuoteTypeResponse summary = JsonSerializer.Deserialize<QuoteTypeResponse>(res);
 
             return summary;
         }
+
+        public QuoteSummaryResponse GetQuoteSummary(string ticker, string[] modules)
+        {
+            string res = readWebPage("https://query2.finance.yahoo.com/v10/finance/quoteSummary/"+ticker+"?modules="+string.Join(",",modules)+"&crumb="+crumb);
+            QuoteSummaryResponse summary = JsonSerializer.Deserialize<QuoteSummaryResponse>(res);
+
+            return summary;
+        }
+
 
         private bool validateDeserialiseData(YahooHist yh) { 
 

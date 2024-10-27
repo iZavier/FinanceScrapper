@@ -58,7 +58,7 @@ namespace FinanceScrapper.Tests
 
 
         [Test]
-        public void GetYahooSummary()
+        public void GetYahooQuoteType()
         {
             // Arrange
             _yahooFinance.Initialise();
@@ -66,10 +66,24 @@ namespace FinanceScrapper.Tests
             var endDate = new DateTime(2023, 1, 1);
 
             // Act
-            var result = _yahooFinance.GetQuoteSummary("AAPl");
+            var result = _yahooFinance.GetQuoteType("AAPl");
 
             // Assert
             ClassicAssert.IsNull(result.QuoteType.Error);  
+        }
+        [Test]
+        public void GetYahooQuoteSummary()
+        {
+            // Arrange
+            _yahooFinance.Initialise();
+            var startDate = new DateTime(2020, 1, 1);
+            var endDate = new DateTime(2023, 1, 1);
+
+            // Act
+            var result = _yahooFinance.GetQuoteSummary("AAPl", new string[3]{ "price", "earnings", "quoteType"});
+
+            // Assert
+            ClassicAssert.IsNull(result.QuoteSummary.Error);
         }
 
         [Test]

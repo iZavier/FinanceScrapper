@@ -42,6 +42,8 @@ namespace History
         public string exchangeName { get; set; }
         public string fullExchangeName { get; set; }
         public string instrumentType { get; set; }
+        public string donkey { get; set; }
+
 
         [JsonConverter(typeof(UnixTimestampToDateConverter))]
         public DateTime firstTradeDate { get; set; }
