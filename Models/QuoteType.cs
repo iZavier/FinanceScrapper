@@ -1,30 +1,19 @@
 ﻿using System;
-using System.Text.Json;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.Json.Serialization;
-namespace quoteType
+using System.Threading.Tasks;
+
+namespace FinanceScrapper.Models
 {
-    public class QuoteTypeResponse
-    {
-        [JsonPropertyName("quoteType")]
-        public QuoteType QuoteType { get; set; }
-    }
-
     public class QuoteType
-    {
-        [JsonPropertyName("result")]
-        public Result[] Result { get; set; }
-
-        [JsonPropertyName("error")]
-        public object Error { get; set; } // Use appropriate type if you expect a specific structure
-    }
-
-    public class Result
     {
         [JsonPropertyName("symbol")]
         public string Symbol { get; set; }
 
         [JsonPropertyName("quoteType")]
-        public string QuoteType { get; set; }
+        public string quoteType { get; set; }
 
         [JsonPropertyName("exchange")]
         public string Exchange { get; set; }
@@ -45,7 +34,7 @@ namespace quoteType
         public string ExchangeTimezoneShortName { get; set; }
 
         [JsonPropertyName("gmtOffSetMilliseconds")]
-        public string GmtOffSetMilliseconds { get; set; }
+        public int GmtOffSetMilliseconds { get; set; }
 
         [JsonPropertyName("market")]
         public string Market { get; set; }

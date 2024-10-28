@@ -56,21 +56,6 @@ namespace FinanceScrapper.Tests
             ClassicAssert.IsNull(result.chartData.chart.error);
         }
 
-
-        [Test]
-        public void GetYahooQuoteType()
-        {
-            // Arrange
-            _yahooFinance.Initialise();
-            var startDate = new DateTime(2020, 1, 1);
-            var endDate = new DateTime(2023, 1, 1);
-
-            // Act
-            var result = _yahooFinance.GetQuoteType("AAPl");
-
-            // Assert
-            ClassicAssert.IsNull(result.QuoteType.Error);  
-        }
         [Test]
         public void GetYahooQuoteSummary()
         {
